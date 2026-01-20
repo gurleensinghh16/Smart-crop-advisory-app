@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Farmer App</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="login" class="screen active">
+  <h2>🌾 Smart Farmer Login</h2>
+  <input placeholder="Farmer Name">
+  <input placeholder="Mobile Number">
+  <select>
+    <option>English</option>
+    <option>Punjabi</option>
+  </select>
+  <button onclick="go('home')">🔓 Login</button>
+</section>
+
+<!-- HOME -->
+<section id="home" class="screen">
+  <h2>📊 Dashboard</h2>
+
+  <button class="home-btn" onclick="go('crop')">
+    <span class="icon">🌱</span>
+    Crop Guide
+  </button>
+
+  <button class="home-btn" onclick="go('disease')">
+    <span class="icon">🦠</span>
+    Disease Check
+  </button>
+
+  <button class="home-btn" onclick="go('calculator')">
+    <span class="icon">🧮</span>
+    Calculator
+  </button>
+
+  <button class="home-btn" onclick="go('settings')">
+    <span class="icon">⚙</span>
+    Settings
+  </button>
+</section>
+
+<!-- CROP GUIDE -->
+<section id="crop" class="screen">
+  <h2>🌱 Crop Guide</h2>
+  <select id="season">
+    <option>Kharif</option>
+    <option>Rabi</option>
+  </select>
+  <button onclick="cropGuide()">🌾 Get Recommendation</button>
+  <p id="cropResult"></p>
+  <button class="back-btn" onclick="go('home')">⬅ Back</button>
+</section>
+
+<!-- DISEASE -->
+<section id="disease" class="screen">
+  <h2>🦠 Disease Check</h2>
+  <input type="file">
+  <button onclick="diseaseCheck()">🔍 Check Crop</button>
+  <p id="diseaseResult"></p>
+  <button class="back-btn" onclick="go('home')">⬅ Back</button>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calculator" class="screen">
+  <h2>🧮 Farm Calculator</h2>
+
+  <select id="cropType">
+    <option>Wheat</option>
+    <option>Rice</option>
+  </select>
+
+  <input id="land" placeholder="Land (Acres)">
+
+  <button onclick="calculate()">📐 Calculate</button>
+
+  <pre id="calcResult"></pre>
+  <button class="back-btn" onclick="go('home')">⬅ Back</button>
+</section>
+
+<!-- SETTINGS -->
+<section id="settings" class="screen">
+  <h2>⚙ Settings</h2>
+  <input placeholder="Farmer Name">
+  <select>
+    <option>English</option>
+    <option>Punjabi</option>
+  </select>
+  <button onclick="go('home')">💾 Save</button>
+</section>
+
+<script src="js/app.js"></script>
+<script src="js/crop.js"></script>
+<script src="js/disease.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/settings.js"></script>
+
+</body>
+</html>

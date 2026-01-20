@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f8f0;
+  text-align: center;
+  margin: 0;
+}
+
+.screen {
+  display: none;
+  padding: 30px;
+  animation: fade 0.3s ease;
+}
+
+.screen.active {
+  display: block;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+input, select {
+  display: block;
+  margin: 12px auto;
+  padding: 12px;
+  width: 240px;
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  margin: 12px auto;
+  padding: 14px;
+  width: 260px;
+  font-size: 18px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+.home-btn {
+  height: 90px;
+  font-size: 20px;
+}
+
+.icon {
+  display: block;
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+
+.back-btn {
+  background: #555;
+}
+
+pre {
+  background: #e8f5e9;
+  padding: 15px;
+  width: 260px;
+  margin: 15px auto;
+  text-align: left;
+  font-size: 15px;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
